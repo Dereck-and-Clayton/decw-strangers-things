@@ -1,4 +1,4 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 // const cohortName = '2304-FTB-ET-WEB-FT';
 // const APIURL = `https://strangers-things.herokuapp.com/api/${cohortName}`;
