@@ -3,7 +3,8 @@ import { useNavigate } from 'react-router-dom';
 
 function CreatePost(props) {
     //gotta figure out where to put this
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
+    const TOKEN_STRING = localStorage.getItem('token');
 
 
     const createPostRequest = async (title, description, price) => {
@@ -12,11 +13,11 @@ function CreatePost(props) {
 
         
         try {
-            const response = await fetch('https://strangers-things.herokuapp.com/api/${cohortName}', {
+            const response = await fetch('https://strangers-things.herokuapp.com/api/2304-FTB-ET-WEB-FT/posts', {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${TOKEN_STRING_HERE}`
+                    'Authorization': `Bearer ${TOKEN_STRING}`
                 },
                 body: JSON.stringify({
                     post: {
@@ -37,7 +38,7 @@ function CreatePost(props) {
     }
 
     const handleSubmit = async(event) {
-
+        event.preventDeafult();
     }
 
     return (

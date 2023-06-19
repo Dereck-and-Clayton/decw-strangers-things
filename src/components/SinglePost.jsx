@@ -14,6 +14,8 @@ function SinglePost( props ) {
 
     // const posts = props.posts;
 
+    
+
     // const specificPost = posts.filter((singlePost) => {
     //     if(singlePost.author == String(id)) {
     //         return singlePost;
