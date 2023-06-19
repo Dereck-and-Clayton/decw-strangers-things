@@ -3,6 +3,7 @@ import {Route, Routes} from "react-router-dom"
 import AllPosts from './components/AllPosts';
 import SinglePost from './components/SinglePost';
 import NavBar from './components/NavBar';
+import SearchBar from './components/SearchBar';
 import LogIn from "./components/LogIn";
 import SignUp from './components/SignUp';
 import './App.css'
@@ -39,11 +40,13 @@ function App() {
 
   return (
     <>
-    <NavBar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
-    <Routes>
-      <Route path ='/' element={<AllPosts allPosts={allPosts} setAllPosts={setAllPosts} />} />
-      <Route path ='/posts/:id' element={<SinglePost allPosts={allPosts} setAllPosts={setAllPosts} />} />
-    </Routes>
+      <NavBar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+      <SearchBar />
+      <Routes>
+        <Route path ='/posts' element={<AllPosts allPosts={allPosts} setAllPosts={setAllPosts} />} />
+        <Route path ='/posts/:id' element={<SinglePost allPosts={allPosts} setAllPosts={setAllPosts} />} />
+        <Route path ='/searchbar' element={<SearchBar allPosts={allPosts} />} />
+      </Routes>
 
     </>
   )
