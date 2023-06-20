@@ -47,7 +47,7 @@ function AllPosts(props) {
 
     return (
         <div>       
-            <h2>All Posts</h2>
+            <h1>All Posts</h1>
             {
                  props.allPosts.length ? props.allPosts.map((singlePost) => {
                     return (

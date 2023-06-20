@@ -45,7 +45,7 @@ function App() {
       <NavBar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
       <SearchBar />
       <Routes>
-        <Route path ='/posts' element={<AllPosts allPosts={allPosts} setAllPosts={setAllPosts} />} />
+        <Route path ='/' element={<AllPosts allPosts={allPosts} setAllPosts={setAllPosts} />} />
         <Route path ='/posts/:id' element={<SinglePost allPosts={allPosts} setAllPosts={setAllPosts} />} />
         <Route path ='/searchbar' element={<SearchBar allPosts={allPosts} />} />
       </Routes>
