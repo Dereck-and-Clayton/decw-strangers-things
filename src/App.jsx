@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
 import {Route, Routes} from "react-router-dom"
+import axios from 'axios';
 import AllPosts from './components/AllPosts';
 import SinglePost from './components/SinglePost';
 import NavBar from './components/NavBar';
 import SearchBar from './components/SearchBar';
 import LogIn from "./components/LogIn";
 import SignUp from './components/SignUp';
+import Home from './components/Home';
 import './App.css'
 
 
